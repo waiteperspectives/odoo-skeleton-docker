@@ -1,0 +1,10 @@
+#! /usr/bin/env bash
+
+if [ $# -eq 0 ]
+  then
+     export ODOO_CMD=""
+else
+     export ODOO_CMD="$@"
+fi
+
+docker-compose run odoo

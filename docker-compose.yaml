@@ -1,0 +1,25 @@
+version: '3'
+services:
+  odoo:
+    image: local/odoo:14.0
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    volumes:
+      - ./docker-src/config:/etc/odoo
+      - ./addons:/mnt/extra-addons
+      - odoo-filestore:/srv/odoo/filestore
+    command: ${ODOO_CMD}
+  db:
+    image: postgres:10
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
+volumes:
+  odoo-db-data:
+  odoo-filestore:
