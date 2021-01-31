@@ -20,6 +20,7 @@ cd ..
 ```
 3. Drop some addons in the `addons` directory
 4. Launch the composition from the project root
+
 **First** make sure your docker-compose.yaml uses the image you just created by altering this line
 `image: local/odoo:14.0` to match the tag used in `docker build`
 
