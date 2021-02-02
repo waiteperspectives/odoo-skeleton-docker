@@ -7,7 +7,7 @@ services:
     ports:
       - "8069:8069"
     volumes:
-      - ./docker-src/config:/etc/odoo
+      - ./docker/config:/etc/odoo
       - ./addons:/mnt/extra-addons
       - odoo-filestore:/srv/odoo/filestore
     command: ${ODOO_CMD}
