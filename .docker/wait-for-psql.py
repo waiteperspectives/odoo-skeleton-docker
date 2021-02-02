@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# from odoo: https://github.com/odoo/docker/blob/master/14.0/wait-for-psql.py
+
 import argparse
 import psycopg2
 import sys

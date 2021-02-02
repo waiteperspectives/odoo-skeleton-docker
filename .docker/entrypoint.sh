@@ -1,4 +1,5 @@
 #!/bin/bash
+# from Odoo: https://github.com/odoo/docker/blob/master/14.0/entrypoint.sh
 
 set -e
 
