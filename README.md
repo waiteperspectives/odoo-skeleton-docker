@@ -30,3 +30,12 @@ cd ..
 
 
 # Configuring PyCharm for Odoo development
+
+## tldr;
+
+1. Add Pycharm Odoo plugin https://plugins.jetbrains.com/plugin/13499-pycharm-odoo
+2. Add odoo-stubs to the path
+```bash
+git clone https://github.com/trinhanhngoc/odoo-stubs -b 14.0 .docker/odoo-stubs
+```
+3. Link to settings repository (TODO)
